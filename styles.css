@@ -1,0 +1,97 @@
+body{
+    background: url(bg.jpg) center/cover no-repeat;
+}
+table{
+    margin: 0 auto;
+    width: 70%
+}
+
+span {
+  display: inline-block;
+}
+tr[class="read"]{
+    background-image: linear-gradient(to left, #e66465, #9198e5)
+
+}
+tr[class="to-read"]{
+    background-image: linear-gradient(to left, #e66465, #9198e5)
+
+}
+tr[class="in-progress"]{
+    background-image: linear-gradient(to left, #e66465, #9198e5)
+
+}
+tr[class="completed"]{
+  background-image: linear-gradient(to left, #e66465, #9198e5)
+}
+
+tr[class="to-read"]  span[class="status"]{
+  border: 2px solid black;
+  background-image: linear-gradient(90deg,rgba(255, 233, 92, 1) 22%, rgba(255, 137, 107, 1) 100%);
+}
+tr[class="read"]  span[class="status"]{
+  border: 2px solid black;
+  background-image: linear-gradient(90deg,rgba(255, 92, 92, 1) 22%, rgba(255, 137, 107, 1) 49%, rgba(253, 180, 85, 1) 70%, rgba(255, 200, 0, 1) 100%);
+}
+tr[class="in-progress"]  span[class="status"]{
+  border: 2px solid black;
+  background-image: linear-gradient(90deg,rgba(92, 236, 255, 1) 22%, rgba(9, 128, 232, 1) 100%);
+}
+tr[class="completed"]  span[class="status"]{
+  border: 2px solid black;
+  background-image: linear-gradient(90deg,rgba(190, 255, 92, 1) 22%, rgba(0, 110, 16, 1) 100%);
+}
+span[class="status"], span[class^="rate"]{
+  height: 30px;
+  width: 100px;
+  padding: 5px;
+  margin: 10px;
+  
+ 
+
+}
+span[class^="rate"] > span{
+  border: 1px solid black;
+  border-radius: 50px;
+  margin: 3px;
+  height: 20px;
+  width: 30px;
+  background-color: white;
+}
+
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(to right, orange, yellow);
+}
+
+span[class~="two"] span:nth-child(-n+2) {
+  background-image: linear-gradient(to right, orange, yellow);
+}
+
+span[class~="three"] span{
+  background-image: linear-gradient(to right, orange, yellow);
+}
+.book-des{
+    width: 20%;
+}
+.rate{
+    display: inline;
+}
+h1{
+    text-align: center;
+    font-size: 2.3rem;
+    color: white;
+}
+th{
+    font-size: 1.3rem;
+    color: #FFFBDE;
+}
+.book-des{
+    text-align: center;
+    font-weight: 500;
+    color: #FFFBDE;
+}
+.status{
+    font-weight: 550;
+    color: black;
+    text-align: center;
+}

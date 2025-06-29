@@ -1,0 +1,133 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Book Inventory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Book Inventory</h1>
+  <table>
+    <thead>
+    <tr>
+      
+      <th>Title</th>
+      <th>Author</th>
+      <th>Category</th>
+      <th>Status</th>
+      <th>Rate</th>
+      
+    </tr>
+    </thead>
+    <tbody>
+     <tr class="read">
+      <td>48 Laws Of Power</td>
+      <td>Robert Greene</td>
+      <td>Self-help</td>
+      <td><span class="status">Read</span></td>
+      <td><span class="rate one"><span></span><span></span><span></span></span></td>
+    </tr>
+    <tr class="to-read">
+      <td>Clean Architecture</td>
+      <td>Robert C. Martin</td>
+      <td>Programming</td>
+      <td><span class="status">To Read</span></td>
+      <td><span class="rate two"><span></span><span></span><span></span></span></td>
+    </tr>
+
+    <tr class="in-progress">
+      <td>Clean Code</td>
+      <td>Robert C. Martin</td>
+      <td>Programming</td>
+      <td><span class="status">In Progress</span></td>
+      <td><span class="rate three"><span></span><span></span><span></span></span></td>
+    </tr>
+      <!-- <tr class="completed">
+      <td>Atomic Habits</td>
+      <td>James Clear</td>
+      <td>Self-help</td>
+      <td><span class="status">Completed</span></td>
+      <td><span class="rate three"><span></span><span></span><span></span></span></td>
+    </tr> -->
+    </tbody>
+
+  </table>
+
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+span {
+  display: inline-block;
+}
+tr[class="read"]{
+    background-image: linear-gradient(to left, #e66465, #9198e5)
+
+}
+tr[class="to-read"]{
+    background-image: linear-gradient(to left, #e66465, #9198e5)
+
+}
+tr[class="in-progress"]{
+    background-image: linear-gradient(to left, #e66465, #9198e5)
+
+}
+tr[class="completed"]{
+  background-image: linear-gradient(to left, #e66465, #9198e5)
+}
+
+tr[class="to-read"]  span[class="status"]{
+  border: 3px solid black;
+  background-image: linear-gradient(90deg,rgba(255, 233, 92, 1) 22%, rgba(255, 137, 107, 1) 100%);
+}
+tr[class="read"]  span[class="status"]{
+  border: 3px solid black;
+  background-image: linear-gradient(90deg,rgba(255, 92, 92, 1) 22%, rgba(255, 137, 107, 1) 49%, rgba(253, 180, 85, 1) 70%, rgba(255, 200, 0, 1) 100%);
+}
+tr[class="in-progress"]  span[class="status"]{
+  border: 3px solid black;
+  background-image: linear-gradient(90deg,rgba(92, 236, 255, 1) 22%, rgba(9, 128, 232, 1) 100%);
+}
+tr[class="completed"]  span[class="status"]{
+  border: 3px solid black;
+  background-image: linear-gradient(90deg,rgba(190, 255, 92, 1) 22%, rgba(0, 110, 16, 1) 100%);
+}
+span[class="status"], span[class^="rate"]{
+  height: 50px;
+  width: 100px;
+  padding: 5px;
+
+}
+span[class^="rate"] > span{
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 3px;
+  height: 30px;
+  width: 50px;
+  background-color: white;
+}
+
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(to right, red, orange);
+}
+
+
+span[class~="two"] span:nth-child(-n+2) {
+  background-image: linear-gradient(to right, orange, yellow);
+}
+
+span[class~="three"] span{
+  background-image: linear-gradient(to right, green, lightgreen);
+}
+
+
+** end of styles.css **
+
